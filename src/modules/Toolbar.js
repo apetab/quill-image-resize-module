@@ -10,7 +10,7 @@ export class Toolbar extends BaseModule {
         Object.assign(this.toolbar.style, this.options.toolbarStyles);
         this.overlay.appendChild(this.toolbar);
 
-        this.parchment = this.quill.imports.parchment;
+        const Parchment = this.quill.imports.parchment;
         this.floatStyle = new Parchment.Attributor.Style('float', 'float');
         this.marginStyle = new Parchment.Attributor.Style('margin', 'margin');
         this.displayStyle = new Parchment.Attributor.Style('display', 'display');
