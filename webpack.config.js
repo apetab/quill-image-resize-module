@@ -1,4 +1,6 @@
 var path = require('path');
+var webpack = require('webpack');
+var ignoreFiles = new webpack.IgnorePlugin(/^quill$/);
 
 module.exports = {
     entry: "./src/ImageResize.js",
@@ -29,5 +31,6 @@ module.exports = {
                 }]
             }
         ]
-    }
+    },
+    plugins: [ignoreFiles]
 };
